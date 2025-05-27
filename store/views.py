@@ -27,7 +27,7 @@ def cart(request):
         cartIitems = order.get_cart_items
     else:
         items = []
-        order = {'get_total_cart': 0, 'get_cart_items': 0}
+        order = {'get_total_cart': 0, 'get_cart_items': 0 ,'shipping': False}
         cartIitems = order['get_cart_items']
     context={"items": items,"order": order,"cartIitems": cartIitems}
     return render(request, 'store/cart.html', context)
@@ -41,7 +41,7 @@ def checkout(request):
         cartIitems = order.get_cart_items
     else:
         items = []
-        order = {'get_total_cart': 0, 'get_cart_items': 0}
+        order = {'get_total_cart': 0, 'get_cart_items': 0, 'shipping': False}
         cartIitems = order['get_cart_items']
     context={"items": items,"order": order,"cartIitems": cartIitems}
     return render(request, 'store/checkout.html', context)
