@@ -7,9 +7,8 @@
           navbar.classList.remove("scrolled");
         }
       });
-
+      
       // Update cart total (demo)
       function updateCartTotal(count) {
         document.getElementById("cart-total").textContent = count;
       }
-
